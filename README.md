@@ -10,6 +10,5 @@
 
 Ссылки:
 * [Доска Trello](https://trello.com/b/pED5NU3S/%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-shapeshifter)
-* [Схема Miro](https://miro.com/app/board/uXjVODn7J1s=/?invite_link_id=128114601271)
+* [Схема Miro](https://miro.com/app/board/uXjVODn7J1s=/?invite_link_id=966092150171)
 * [Техническое задание](https://github.com/maximcherd)
-* [Курсовой проект](https://github.com/maximcherd)
