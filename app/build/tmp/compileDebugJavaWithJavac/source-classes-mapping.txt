@@ -1,4 +1,0 @@
-com/example/shapeshifter/BuildConfig.java
- com.example.shapeshifter.BuildConfig
-com/example/shapeshifter/MainActivity.java
- com.example.shapeshifter.MainActivity
