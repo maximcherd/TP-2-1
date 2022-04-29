@@ -1,0 +1,3 @@
+[submodule "ShapeshifterApp/Server"]
+	path = ShapeshifterApp/Server
+	url = https://github.com/maximcherd/Server.git
