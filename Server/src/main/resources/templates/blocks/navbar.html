@@ -1,0 +1,64 @@
+<nav th:fragment="navbar" class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a th:href="@{/home/main}" class="navbar-brand">ShapeShifter</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item">
+                    <a th:href="@{/home/main}"
+                       th:class="'nav-link' + ${#httpServletRequest.requestURI == '/home/main' ? ' active' : ''}">
+                        Главная
+                    </a>
+                </li>
+                <li th:if="${isUser} or ${isAdmin}" class="nav-item">
+                    <a th:href="@{/picture/album}"
+                       th:class="'nav-link' + ${#httpServletRequest.requestURI == '/picture/album' ? ' active' : ''}">
+                        Лента
+                    </a>
+                </li>
+                <li th:if="${isUser} or ${isAdmin}" class="nav-item">
+                    <a th:href="@{/picture/add}"
+                       th:class="'nav-link' + ${#httpServletRequest.requestURI == '/picture/add' ? ' active' : ''}">
+                        Загрузить
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a th:href="@{/home/about}"
+                       th:class="'nav-link' + ${#httpServletRequest.requestURI == '/home/about' ? ' active' : ''}">
+                        О проекте
+                    </a>
+                </li>
+            </ul>
+            <div class="d-flex">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li th:if="!${isUser} and !${isAdmin}" class="nav-item">
+                        <a th:href="@{/authentication/login}" class="nav-link">
+                            Войти
+                        </a>
+                    </li>
+                    <li th:if="!${isUser} and !${isAdmin}" class="nav-item">
+                        <a th:href="@{/authentication/registration}"
+                           class="nav-link">
+                            Зарегистрироваться
+                        </a>
+                    </li>
+                    <li th:if="${isUser} or ${isAdmin}" class="nav-item">
+                        <a th:href="@{/profile/user}"
+                           th:text="${currUser.login}"
+                           class="nav-link">
+                        </a>
+                    </li>
+                    <li th:if="${isUser} or ${isAdmin}" class="nav-item">
+                        <a th:href="@{/logout}"
+                           class="nav-link">
+                            Выйти
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
