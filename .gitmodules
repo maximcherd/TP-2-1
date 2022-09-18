@@ -1,6 +1,3 @@
 [submodule "ShapeshifterApp/Server"]
 	path = ShapeshifterApp/Server
 	url = https://github.com/maximcherd/Server.git
-[submodule "ShapeshifterApp/Resizer"]
-	path = ShapeshifterApp/Resizer
-	url = https://github.com/maximcherd/Resizer.git
